@@ -1,0 +1,143 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+}
+a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+body{
+    color:#fff;
+}
+
+
+nav{
+    height: 7vh;
+    background-color: rgb(73, 72, 72);
+}
+.div-container{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto 0 auto;
+    align-items: center;
+
+}
+
+
+.logo{
+
+    font-size:20px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display:flex;
+    align-items: center;
+    padding: 20px 0px;
+}
+li{
+    padding: 0 10px;
+    list-style-type: none;
+
+}
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    transition:0.3s;
+    width:20px;
+    height: 3px;
+    margin:5px;
+    background-color: #fff;
+}
+.data-dashboard{
+    font-size: 20px;
+}
+.add-post-icon{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(173, 172, 172, 0.452);
+    padding: 10px;
+    box-shadow: 0 2px 3px rgba(104, 104, 104, 0.20);
+    align-items: center;
+   
+}
+.grade{
+    cursor: pointer;
+}
+@media(max-width:700px){
+    body{
+        overflow-x:hidden;
+    }
+    
+.logo{
+
+    font-size:14px;
+    cursor: pointer;
+}
+    .burger {
+        display: block;
+    }
+    .nav-links{
+       
+        height: 100%;
+        width: 170px;
+        font-size: 14px;
+        position: fixed;
+        background-color:#111;
+        top:8vh;
+        right:0;
+        opacity:0.9;
+        transition:0.3s;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+      
+    }
+
+    li{
+        padding: 15px;
+    }
+   
+
+   .nav-active{
+    transform: translateX(0%);
+   }
+ 
+   .burger-active .line1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+        
+    }
+    .burger-active .line2{
+        opacity: 0;
+    }
+    .burger-active .line3{
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+}
+
+@media(max-width:400px){
+    .logo{
+        font-size:11px;
+        cursor: pointer;
+    }
+}
